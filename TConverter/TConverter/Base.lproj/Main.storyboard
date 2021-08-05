@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,34 +13,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="WhX-XV-q2E">
-                                <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZE-29-Tzr">
-                                <rect key="frame" x="421" y="88.666666666666686" width="84" height="58.000000000000014"/>
+                                <rect key="frame" x="145.66666666666666" y="296" width="84" height="58"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQU-h3-nnX">
-                                <rect key="frame" x="425" y="277.66666666666669" width="76" height="59"/>
+                                <rect key="frame" x="149.66666666666666" y="485" width="76" height="59"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="avC-73-89c">
-                                <rect key="frame" x="318" y="188.66666666666663" width="290" height="31"/>
+                                <rect key="frame" x="42.666666666666657" y="396" width="290" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="286" id="lhq-pq-tAp"/>
                                 </constraints>
                                 <color key="minimumTrackTintColor" systemColor="systemTealColor"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rg5-q2-j88"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6dj-px-iME">
-                                <rect key="frame" x="557" y="61" width="293" height="44.666666666666657"/>
+                                <rect key="frame" x="66.666666666666686" y="122.00000000000001" width="242" height="44.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +53,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WhX-XV-q2E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="2Vb-4v-C82"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dj-px-iME" secondAttribute="trailing" constant="49" id="8bs-Wj-gkf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dj-px-iME" secondAttribute="trailing" constant="35" id="CUe-PW-Azz"/>
+                            <constraint firstItem="6dj-px-iME" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="GOp-gL-wzk"/>
                             <constraint firstItem="qZE-29-Tzr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JEy-Qm-dJs"/>
                             <constraint firstItem="WhX-XV-q2E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KPn-HO-R23"/>
                             <constraint firstItem="6dj-px-iME" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LVu-ih-8fo"/>
@@ -66,6 +71,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dj-px-iME" secondAttribute="trailing" constant="31" id="iuo-om-AnG"/>
                             <constraint firstItem="WhX-XV-q2E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mY7-2a-fJb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dj-px-iME" secondAttribute="trailing" constant="32" id="nbu-9i-PCG"/>
+                            <constraint firstItem="6dj-px-iME" firstAttribute="leading" secondItem="qZE-29-Tzr" secondAttribute="trailing" constant="51" id="oUm-qX-mKe"/>
                             <constraint firstItem="avC-73-89c" firstAttribute="top" secondItem="qZE-29-Tzr" secondAttribute="bottom" constant="42" id="qtJ-hm-Dzu"/>
                             <constraint firstItem="avC-73-89c" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ssy-9H-nLJ"/>
                             <constraint firstItem="6dj-px-iME" firstAttribute="leading" secondItem="qZE-29-Tzr" secondAttribute="trailing" constant="46" id="vH7-AD-6Iu"/>
@@ -74,15 +80,18 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="8bs-Wj-gkf"/>
                                 <exclude reference="CUe-PW-Azz"/>
                                 <exclude reference="Mmq-RS-iwS"/>
                                 <exclude reference="iuo-om-AnG"/>
                                 <exclude reference="nbu-9i-PCG"/>
+                                <exclude reference="GOp-gL-wzk"/>
                                 <exclude reference="LVu-ih-8fo"/>
                                 <exclude reference="Nmu-rY-BRb"/>
                                 <exclude reference="O7f-zP-x6X"/>
                                 <exclude reference="ah8-Sy-2pU"/>
                                 <exclude reference="fSZ-zM-uL4"/>
+                                <exclude reference="oUm-qX-mKe"/>
                                 <exclude reference="vH7-AD-6Iu"/>
                                 <exclude reference="yQ1-B6-DM1"/>
                                 <exclude reference="yhm-ba-d4o"/>
@@ -112,7 +121,19 @@
                                 <include reference="fSZ-zM-uL4"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="8bs-Wj-gkf"/>
+                                <include reference="GOp-gL-wzk"/>
+                                <include reference="oUm-qX-mKe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="qZE-29-Tzr" id="LbB-Bt-nDq"/>
+                        <outlet property="farenheitLabel" destination="wQU-h3-nnX" id="1HL-y7-CIf"/>
+                        <outlet property="slider" destination="avC-73-89c" id="uyl-Pr-eHl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
