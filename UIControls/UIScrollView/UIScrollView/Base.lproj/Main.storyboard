@@ -73,14 +73,29 @@
                                             <action selector="dateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="3tE-Rq-6Ty"/>
                                         </connections>
                                     </datePicker>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3m7-kv-1Nb">
+                                        <rect key="frame" x="254" y="718" width="51" height="31"/>
+                                        <color key="onTintColor" systemColor="systemRedColor"/>
+                                        <color key="thumbTintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="hideElemets:" destination="BYZ-38-t0r" eventType="valueChanged" id="xiT-Cl-KQS"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скрыть все елементы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-9x-TcU">
+                                        <rect key="frame" x="16" y="718" width="230" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="VtT-UQ-wko" secondAttribute="bottom" constant="101" id="2FS-Ld-cte"/>
+                                    <constraint firstItem="kJC-9x-TcU" firstAttribute="leading" secondItem="dmf-y9-wkN" secondAttribute="leading" constant="16" id="0ZS-db-fMv"/>
                                     <constraint firstItem="1fK-f0-fgY" firstAttribute="leading" secondItem="dmf-y9-wkN" secondAttribute="leading" constant="46" id="3zg-pw-Qob"/>
                                     <constraint firstItem="3nZ-0L-SJi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dmf-y9-wkN" secondAttribute="leading" id="44m-60-7An"/>
                                     <constraint firstAttribute="trailing" secondItem="PG1-Ys-rVN" secondAttribute="trailing" constant="46" id="4MM-eE-WBM"/>
                                     <constraint firstItem="3nZ-0L-SJi" firstAttribute="centerX" secondItem="dmf-y9-wkN" secondAttribute="centerX" id="5Kt-05-qLb"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3nZ-0L-SJi" secondAttribute="trailing" id="64M-ke-Qlv"/>
+                                    <constraint firstItem="kJC-9x-TcU" firstAttribute="height" secondItem="3m7-kv-1Nb" secondAttribute="height" id="77g-wr-dNd"/>
                                     <constraint firstItem="5JM-ri-MEQ" firstAttribute="leading" secondItem="dmf-y9-wkN" secondAttribute="leading" constant="20" symbolic="YES" id="8R8-Yh-YFF"/>
                                     <constraint firstItem="3nZ-0L-SJi" firstAttribute="top" secondItem="5JM-ri-MEQ" secondAttribute="bottom" constant="61" id="BZX-36-YdT"/>
                                     <constraint firstAttribute="trailing" secondItem="VtT-UQ-wko" secondAttribute="trailing" constant="1" id="DXc-Uk-Bxe"/>
@@ -90,11 +105,16 @@
                                     <constraint firstItem="BT6-51-CNI" firstAttribute="centerX" secondItem="dmf-y9-wkN" secondAttribute="centerX" id="JSw-2i-GST"/>
                                     <constraint firstItem="VtT-UQ-wko" firstAttribute="leading" secondItem="dmf-y9-wkN" secondAttribute="leading" constant="-1" id="NtV-NO-O6R"/>
                                     <constraint firstItem="1fK-f0-fgY" firstAttribute="top" secondItem="PG1-Ys-rVN" secondAttribute="bottom" constant="56" id="TDk-sb-Sst"/>
+                                    <constraint firstItem="3m7-kv-1Nb" firstAttribute="leading" secondItem="kJC-9x-TcU" secondAttribute="trailing" constant="8" symbolic="YES" id="TGd-4u-kAN"/>
+                                    <constraint firstAttribute="trailing" secondItem="3m7-kv-1Nb" secondAttribute="trailing" constant="17" id="WdH-Zm-JsE"/>
                                     <constraint firstAttribute="trailing" secondItem="1fK-f0-fgY" secondAttribute="trailing" constant="46" id="aBx-3h-7Xl"/>
                                     <constraint firstItem="PG1-Ys-rVN" firstAttribute="top" secondItem="3nZ-0L-SJi" secondAttribute="bottom" constant="48" id="c9j-l3-pOY"/>
                                     <constraint firstItem="BT6-51-CNI" firstAttribute="top" secondItem="1fK-f0-fgY" secondAttribute="bottom" constant="99" id="dzb-UQ-Dty"/>
                                     <constraint firstItem="5JM-ri-MEQ" firstAttribute="top" secondItem="dmf-y9-wkN" secondAttribute="top" constant="20" symbolic="YES" id="i1p-cV-YH2"/>
                                     <constraint firstItem="PG1-Ys-rVN" firstAttribute="leading" secondItem="dmf-y9-wkN" secondAttribute="leading" constant="46" id="k6L-DO-bJM"/>
+                                    <constraint firstAttribute="bottom" secondItem="3m7-kv-1Nb" secondAttribute="bottom" constant="31" id="ngl-rg-Vic"/>
+                                    <constraint firstItem="kJC-9x-TcU" firstAttribute="top" secondItem="VtT-UQ-wko" secondAttribute="bottom" constant="33" id="np9-AQ-lvg"/>
+                                    <constraint firstItem="3m7-kv-1Nb" firstAttribute="top" secondItem="VtT-UQ-wko" secondAttribute="bottom" constant="33" id="yDh-pp-JFH"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -111,13 +131,18 @@
                     </view>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
+                        <outlet property="buttonControl" destination="BT6-51-CNI" id="vI5-Oc-NbO"/>
                         <outlet property="datePickerControl" destination="VtT-UQ-wko" id="vLn-6f-RGg"/>
+                        <outlet property="hideElemetsLabel" destination="kJC-9x-TcU" id="ysc-Pn-5wP"/>
                         <outlet property="labelControl" destination="3nZ-0L-SJi" id="jPg-6c-IGU"/>
+                        <outlet property="segmentControl" destination="5JM-ri-MEQ" id="Sbq-Fl-JTl"/>
+                        <outlet property="sliderControl" destination="PG1-Ys-rVN" id="Jp6-y2-P9Z"/>
+                        <outlet property="textFieldControl" destination="1fK-f0-fgY" id="NdX-yW-tFK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67.200000000000003" y="107.0464767616192"/>
+            <point key="canvasLocation" x="66.153846153846146" y="106.63507109004739"/>
         </scene>
     </scenes>
     <resources>
@@ -126,6 +151,9 @@
         </namedColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
