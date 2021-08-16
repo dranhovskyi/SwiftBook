@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewButtomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stepperControl: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,13 @@ class ViewController: UIViewController {
         textView.backgroundColor = self.view.backgroundColor
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
         textView.layer.cornerRadius = 10
+        
+        stepperControl.value = 17
+        stepperControl.minimumValue = 10
+        stepperControl.maximumValue = 25
+        stepperControl.tintColor = .white
+        stepperControl.backgroundColor = .gray
+        stepperControl.layer.cornerRadius = 5
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTextView(notification:)),
@@ -58,6 +66,13 @@ class ViewController: UIViewController {
         
         textView.scrollRangeToVisible(textView.selectedRange)
     }
+    
+    @IBAction func changeFont(_ sender: UIStepper) {
+        let font = textView.font?.fontName
+        let fontSize = CGFloat(sender.value)
+        textView.font = UIFont(name: font!, size: fontSize)
+    }
+    
 }
 
 extension ViewController: UITextViewDelegate {
