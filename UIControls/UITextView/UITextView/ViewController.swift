@@ -13,15 +13,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewButtomConstraint: NSLayoutConstraint!
     @IBOutlet weak var stepperControl: UIStepper!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textView.delegate = self
-        textView.text = ""
         textView.backgroundColor = self.view.backgroundColor
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
         textView.layer.cornerRadius = 10
+        textView.isHidden = true
+        textView.alpha = 0
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        activityIndicator.startAnimating()
         
         stepperControl.value = 17
         stepperControl.minimumValue = 10
@@ -29,6 +35,13 @@ class ViewController: UIViewController {
         stepperControl.tintColor = .white
         stepperControl.backgroundColor = .gray
         stepperControl.layer.cornerRadius = 5
+        stepperControl.isUserInteractionEnabled = false
+                
+        UIView.animateKeyframes(withDuration: 0, delay: 3, options: .allowUserInteraction, animations: { self.textView.alpha = 1 }) { (finished) in
+            self.activityIndicator.stopAnimating()
+            self.textView.isHidden = false
+            self.stepperControl.isUserInteractionEnabled = true
+        }
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTextView(notification:)),
@@ -89,7 +102,7 @@ extension ViewController: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         countLabel.text = "\(textView.text.count)"
-        return textView.text.count + (text.count - range.length) <= 60
+        return textView.text.count + (text.count - range.length) <= 500
     }
 }
 

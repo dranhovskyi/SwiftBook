@@ -39,6 +39,9 @@ The appearance of the keyboard itself can be customized using the properties pro
                                     <action selector="changeFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="bFl-dN-WOB"/>
                                 </connections>
                             </stepper>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-Rn-3sE">
+                                <rect key="frame" x="197" y="442.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -46,8 +49,10 @@ The appearance of the keyboard itself can be customized using the properties pro
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="JNz-2w-uFP" secondAttribute="trailing" constant="380" id="0se-OI-ejg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mPg-mj-gVh" secondAttribute="trailing" constant="31" id="2M3-fR-s7t"/>
                             <constraint firstItem="hmC-09-14J" firstAttribute="top" secondItem="JNz-2w-uFP" secondAttribute="bottom" constant="26" id="3SG-fb-Nar"/>
+                            <constraint firstItem="AMa-Rn-3sE" firstAttribute="centerX" secondItem="hmC-09-14J" secondAttribute="centerX" id="846-s7-bxl"/>
                             <constraint firstItem="JNz-2w-uFP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ana-q2-j5Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hmC-09-14J" secondAttribute="trailing" constant="20" id="DCS-Zk-gaK"/>
+                            <constraint firstItem="AMa-Rn-3sE" firstAttribute="centerY" secondItem="hmC-09-14J" secondAttribute="centerY" id="LO4-Ta-0Js"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hmC-09-14J" secondAttribute="bottom" constant="65" id="Lne-i6-5vL"/>
                             <constraint firstItem="JNz-2w-uFP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="iJ6-da-Eyq"/>
                             <constraint firstItem="mPg-mj-gVh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="sEZ-tr-y5L"/>
@@ -55,6 +60,7 @@ The appearance of the keyboard itself can be customized using the properties pro
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="AMa-Rn-3sE" id="MQW-NA-47c"/>
                         <outlet property="countLabel" destination="JNz-2w-uFP" id="CUm-zb-k6G"/>
                         <outlet property="stepperControl" destination="mPg-mj-gVh" id="iO7-Wt-CUH"/>
                         <outlet property="textView" destination="hmC-09-14J" id="mWy-8o-3dS"/>
