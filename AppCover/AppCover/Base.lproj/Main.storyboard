@@ -49,13 +49,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nas-av-jfX">
-                                <rect key="frame" x="20" y="147" width="374" height="375"/>
+                                <rect key="frame" x="20" y="110" width="374" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="375" id="P2Q-H1-nVz"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9d-56-yIh">
-                                <rect key="frame" x="20" y="578" width="42" height="21"/>
+                                <rect key="frame" x="20" y="541" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                         <constraints>
                             <constraint firstItem="8qs-0A-lkD" firstAttribute="trailing" secondItem="nas-av-jfX" secondAttribute="trailing" constant="20" id="4m5-Wm-g2d"/>
                             <constraint firstItem="nas-av-jfX" firstAttribute="centerX" secondItem="8qs-0A-lkD" secondAttribute="centerX" id="7qY-d3-fN4"/>
-                            <constraint firstItem="nas-av-jfX" firstAttribute="top" secondItem="8qs-0A-lkD" secondAttribute="top" constant="59" id="9YO-gs-h9h"/>
+                            <constraint firstItem="nas-av-jfX" firstAttribute="top" secondItem="8qs-0A-lkD" secondAttribute="top" constant="22" id="9YO-gs-h9h"/>
                             <constraint firstItem="nas-av-jfX" firstAttribute="leading" secondItem="8qs-0A-lkD" secondAttribute="leading" constant="20" id="O4q-nR-L2n"/>
                             <constraint firstItem="g9d-56-yIh" firstAttribute="leading" secondItem="8qs-0A-lkD" secondAttribute="leading" constant="20" id="ZLs-im-GZA"/>
                             <constraint firstItem="g9d-56-yIh" firstAttribute="top" secondItem="nas-av-jfX" secondAttribute="bottom" constant="56" id="eYw-B7-u9j"/>
